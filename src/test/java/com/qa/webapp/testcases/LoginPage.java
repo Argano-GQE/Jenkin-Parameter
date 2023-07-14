@@ -14,7 +14,7 @@ public class LoginPage {
 	// static WebDriver driver;
 	@Parameters("Browser")
 	@Test
-	public static void application() {
+	public static void application(String Browser) {
 
 		By username = By.name("user-name");
 		By password = By.name("password");
@@ -24,7 +24,7 @@ public class LoginPage {
 
 		BrowserUtil brUtl = new BrowserUtil();
 
-		WebDriver driver = brUtl.launchBrowser("Browser");
+		WebDriver driver = brUtl.launchBrowser(Browser);
 		brUtl.enterURL("https://www.saucedemo.com/");
 		brUtl.getPageTitle();
 		brUtl.getCurrentURL();
